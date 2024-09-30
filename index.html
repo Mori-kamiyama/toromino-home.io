@@ -1,2 +1,130 @@
-<meta http-equiv="refresh" content="0; url=/lifegame-web/">
-
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>TOROMINO HOME</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header-logo">
+                <h2>TOROMINO</h2>
+                <img src="public/logo.png" alt="" />
+                <p></p>
+            </div>
+            <hr />
+            <hr />
+            <div class="button-bar">
+                <button onclick="scrollToTarget('About')">About</button>
+                <button onclick="scrollToTarget('Member')">Member</button>
+                <a href="mailto:toromino.kmc@gmail.com" class="inline">
+                    <img src="public/mail.png" class="mail" alt="">
+                    Mail
+                </a>
+            </div>
+            <hr />
+        </header>
+        <section id="About" class="intro">
+            <div class="textbox">
+                <p class="ja">
+                    TOROMINOは、発表された面白いものを社会に実装することを目的として活動しているグループです。LifeGameの研究やCAD制作、ドラムアプリの開発、完全木製時計の研究など、多様なプロジェクトを通じて、新しい技術やアイデアの開発に取り組んでいます。個々の研究員が自由に創造的な研究を
+                    進めることで、独自の表現や技術を追求しています。
+                </p>
+                <p class="en">
+                    TOROMINO is a group focused on bringing innovative ideas to
+                    society. They work on diverse projects like LifeGame
+                    research, CAD design, drum app development, and fully wooden
+                    clocks. Each member is free to pursue their own creative
+                    research, exploring unique expressions and techniques.
+                </p>
+            </div>
+            <div class="pictures">
+                <button onclick="location.href='https://toromino.net/lifegame-web/'" class="photo-card">
+                    <img src="public/lifegame.png" alt="" />
+                    <p class="ja">lifegame</p>
+                </button>
+                <button onclick="location.href='https://markov-chain.vercel.app/'" class="photo-card">
+                    <img src="public/markov.png" alt="" />
+                    <p class="ja">markov chain</p>
+                </button>
+                <div id="cash-register" class="photo-card">
+                    <img src="public/cash-register.png" alt="" />
+                    <p class="ja">cash register</p>
+                </div>
+                <div id="Manna" class="photo-card">
+                    <img src="public/Manna.png" alt="" />
+                    <p class="ja">Manna</p>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section class="keyword">
+            <div>
+                <h1>
+                    If you want to increase your success rate, double your failure
+                    rate.
+                </h1>
+                <h3>Thomas J Watson</h3>
+                <p class="ja">
+                    世界を変えるソリューションは、実験的なモノづくりから始まり、試作を繰り返すことで大成していきました。
+                    私たちTOROMINOは実験的なモノづくりを大事に試作を繰り返す資金、技術、コネクションを築くことを目的として
+                    立ち上げられました。
+                </p>
+                <p class="en">
+                    World-changing solutions have often started with experimental
+                    creation and have been perfected through repeated prototyping.
+                    TOROMINO was established with the aim of building funds,
+                    technology, and connections necessary to support experimental
+                    creation and continuous prototyping.
+                </p>
+            </div>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <img src="public/lifegame.png" alt="Image 1" />
+                    <img src="public/markov.png" alt="Image 2" />
+                    <img src="public/cash-register.png" alt="Image 3" />
+                </div>
+                <div class="carousel-nav">
+                    <div class="indicators"></div>
+                    <button class="prev" onclick="moveCarousel(-1)">
+                        &#10094;
+                    </button>
+                    <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section class="info">
+            <img src="public/神山町の風景.jpg" alt="">
+            <h3>TOROMINO</h3>
+            <h4 id="Member">members</h4>
+            <div class="member-container">
+                <div>
+                    <img src="public/umehara.png" alt="">
+                    <p>梅原流</p>
+                    <p class="inline">Ryu Umehara</p>
+                    <p class="inline translucent">メンバー</p>
+                </div>
+                <div>
+                    <img src="public/morikawa.png" alt="">
+                    <p>森川結太</p>
+                    <p class="inline">Yuta Morikawa</p>
+                    <p class="inline translucent">メンバー</p>
+                </div>
+                <div>
+                    <img src="public/sato.png" alt="">
+                    <p>佐藤誠</p>
+                    <p class="inline">Makoto Sato</p>
+                    <p class="inline translucent">メンバー</p>
+                </div>
+            </div>
+            <h4>Contact</h4>
+            <img src="public/mail.png" class="inline mail" alt="">
+            <p class="inline">toromino.kmc@gmail.com</p>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
