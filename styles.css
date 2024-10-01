@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     width: 75%;
     margin: 0 auto;
@@ -5,14 +6,16 @@ body {
     color: white;
 }
 
+.ja, .en {
+    line-height: 1.8rem;
+}
+
 .ja {
     letter-spacing: 0.2rem;
-    line-height: 1.8rem;
 }
 
 .en {
     letter-spacing: 0.1rem;
-    line-height: 1.8rem;
 }
 
 hr {
@@ -20,100 +23,86 @@ hr {
     margin: 2px;
 }
 
-header {
-    .inline {
-        display: inline;
-    }
-
-    .header-logo {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .header-logo img {
-        height: 130px;
-    }
-
-    .header-logo h2 {
-        margin: auto 0 auto 10%;
-        font-family: "Inria Sans", sans-serif;
-        font-weight: 400;
-    }
-
-    .button-bar {
-        width: 80%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .button-bar * {
-        display: flex;
-
-        border: none;
-        background: none;
-
-        color: white;
-        text-align: center;
-        margin: 10px;
-        font-family: Inter, sans-serif;
-        font-weight: 300;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-    }
-
-    .mail {
-        width: 1rem;
-        text-align: right;
-        align-items: center;
-    }
+/* Header Styles */
+header .header-logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.intro {
+.header-logo img {
+    height: 130px;
+}
+
+.header-logo h2 {
+    margin: auto 0 auto 10%;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 400;
+}
+
+.button-bar {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button-bar * {
+    display: flex;
+    border: none;
+    background: none;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.mail {
+    width: 1em !important;
+    text-align: right;
+    align-items: center;
+    display: inline;
+}
+
+/* Section Styles */
+.intro, .keyword, .info, .member-container {
     margin: 10vh 0;
-
-    .textbox {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        color: color-mix(in lab, white 70%, black);
-
-        font-family:
-            Inter,
-            Noto Sans JP,
-            sans-serif;
-        font-size: 0.9rem;
-
-        margin: 10vh 0;
-    }
-
-    .pictures {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px;
-    }
-
-    .photo-card {
-        background: none;
-        text-align: left;
-        color: white;
-        border: none;
-
-        padding: 0;
-
-        font-size: 1rem;
-    }
-
-    .photo-card img {
-        width: 100%;
-    }
 }
 
+.textbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    color: color-mix(in lab, white 70%, black);
+    font-family: Inter, Noto Sans JP, sans-serif;
+    font-size: 0.9rem;
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.photo-card {
+    background: none;
+    text-align: left;
+    color: white;
+    border: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.photo-card img {
+    width: 100%;
+}
+
+/* Card Hover Styles */
 .intro .photo-card {
-    /* 既存のスタイル */
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
@@ -127,143 +116,189 @@ header {
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
 }
 
+/* Keyword Section */
 .keyword {
-    margin: 10vh 0;
-
     display: grid;
     grid-template-columns: 5fr 6fr;
     gap: 30px;
-
-    h1 {
-        font-size: 3rem;
-        font-family: "Adobe Garamond Pro", "EB Garamond", serif;
-        font-weight: bold;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-        text-align: right;
-        font-family: "Adobe Garamond Pro", "EB Garamond", serif;
-        font-weight: lighter;
-    }
-
-    p {
-        font-size: 0.8rem;
-        color: color-mix(in lab, white 70%, black);
-        font-family:
-            Inter,
-            Noto Sans JP,
-            sans-serif;
-    }
-
-    .carousel {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        margin: auto 0;
-    }
-
-    .carousel-container {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .carousel-container img {
-        width: 100%;
-        flex-shrink: 0;
-    }
-
-    .carousel-nav {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .prev,
-    .next {
-        background: none;
-        border: white 2px solid;
-        color: white;
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-        font-size: 18px;
-        cursor: pointer;
-        margin: 10px;
-        transition: all 0.3s ease;
-    }
-
-    .prev:disabled,
-    .next:disabled {
-        border-color: #666; /* 灰色の境界線 */
-        color: #666; /* 灰色のテキスト */
-        cursor: not-allowed; /* カーソルを変更 */
-    }
-
-    .indicators {
-        width: calc(100% - 120px * 2);
-        display: flex;
-        justify-content: center;
-        margin: 0 10px;
-    }
-
-    .indicator {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #333;
-        margin: 0 5px;
-        cursor: pointer;
-    }
-
-    .indicator.active {
-        background-color: #bbb;
-    }
 }
 
-.info {
-    margin: 10vh 0;
+.keyword h1 {
+    font-size: 3rem;
+    font-family: "Adobe Garamond Pro", "EB Garamond", serif;
+    font-weight: bold;
+}
 
-    h3 {
-        font-size: 1.5rem;
-        margin-top: 10vh;
-    }
-    h4 {
-        font-size: 1.2rem;
+.keyword h3 {
+    font-size: 1.3rem;
+    text-align: right;
+    font-family: "Adobe Garamond Pro", "EB Garamond", serif;
+    font-weight: lighter;
+}
+
+.keyword p {
+    font-size: 0.8rem;
+    color: color-mix(in lab, white 70%, black);
+    font-family: Inter, Noto Sans JP, sans-serif;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: auto 0;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prev, .next {
+    background: none;
+    border: white 2px solid;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.prev:disabled, .next:disabled {
+    border-color: #666;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.indicators {
+    width: calc(100% - 240px);
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #bbb;
+}
+
+/* Info Section */
+.info h3 {
+    font-size: 1.5rem;
+    margin-top: 10vh;
+}
+
+.info h4 {
+    font-size: 1.2rem;
+}
+
+.info p {
+    font-weight: 200;
+}
+
+.info img {
+    width: 100%;
+}
+
+.info mail {
+    display:inline;
+    width: 1em;
+}
+
+.info .inline {
+    display: inline;
+}
+
+/* Member Container */
+.member-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 200px;
+}
+
+.member-container p {
+    margin: 10px 20px 5px 0;
+    font-weight: lighter;
+}
+
+/* Translucent Text */
+.translucent {
+    color: color-mix(in lab, white 70%, black);
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    body {
+        width: 90% ;
     }
 
-    p {
-        font-weight: 100;
+    header .header-logo {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
     }
 
-    img {
-        width: 100%;
+    .header-logo img {
+        height: 70px;
+        margin: 0 auto;
     }
 
-    .inline {
-        display: inline;
+    .header-logo h2 {
+        display: none;
     }
 
-    .mail {
-        width: 1rem;
-        align-items: center;
+    .header-logo p {
+        display: none;
+    }
+
+    .en {
+        display: none;
+    }
+
+    .textbox {
+        grid-template-columns: 1fr;
+        font-size: 0.4em;
+    }
+
+    .pictures {
+        margin: 10vh 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .keyword{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
     }
 
     .member-container {
-        margin: 10vh 0;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 200px;
-
-        p {
-            margin: 10px 20px 5px 0;
-            font-weight: lighter;
-        }
-
-        .translucent {
-            color: color-mix(in lab, white 70%, black);
-        }
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10vh;
+        max-width: 60%;
+        margin: 0 auto;
     }
 }
