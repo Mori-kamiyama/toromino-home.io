@@ -79,6 +79,7 @@ header .header-logo {
     color: color-mix(in lab, white 70%, black);
     font-family: Inter, Noto Sans JP, sans-serif;
     font-size: 0.9rem;
+    margin-bottom: 5vh;
 }
 
 .pictures {
