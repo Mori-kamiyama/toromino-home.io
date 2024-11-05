@@ -295,8 +295,8 @@ header .header-logo {
         grid-template-rows: 2fr 1fr;
     }
 
-    .keyword > h1 {
-        font-size: 2em;
+    .keyword h1 {
+        font-size: 2.5em;
     }
 
     .member-container {
