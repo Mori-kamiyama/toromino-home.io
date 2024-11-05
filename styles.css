@@ -295,6 +295,10 @@ header .header-logo {
         grid-template-rows: 2fr 1fr;
     }
 
+    .keyword > h1 {
+        font-size: 2em;
+    }
+
     .member-container {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
